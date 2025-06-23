@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const a = document.createElement('a');
     a.href = '#';
-    a.className = 'text-white text-decoration-none fw-semibold';
+    a.className = 'text-decoration-none fw-semibold';
     a.textContent = label;
 
     li.appendChild(a);
@@ -109,6 +109,6 @@ document.addEventListener('click', function (event) {
 
   if (!clickedInsideMenu && !clickedToggle && menu.classList.contains('show')) {
     menu.classList.remove('show'); // Hide the menu
-    toggleBtn.classList.remove('open'); // Optional: revert icon animation
+    toggleBtn.classList.remove('active'); // Optional: revert icon animation
   }
 });

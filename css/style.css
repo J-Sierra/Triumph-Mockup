@@ -17,6 +17,7 @@ body {
   background-color: #f0f0f0;
   background-size: cover;
   border-radius: 48px;
+  min-height: 925px;
   height: 98vh;
   padding: 20px;
 
@@ -29,11 +30,18 @@ body {
 .logo {
   top: 30px;
   left: 20px;
-  width: clamp(150px, 25vw, 226px);
+  width: clamp(120px, 25vw, 226px);
 }
 .navbar {
   top: 70px;
   right: 20px ;
+}
+#main-nav-list a{
+  color: #ffffff;
+}
+#main-nav-list a:hover {
+  color: #ED4B1E;
+  font-weight: 500;
 }
 #mobileNav{
   top: 50px;
@@ -75,6 +83,14 @@ body {
 .create-account {
   top: 30px;
   right: 20px;
+}
+.create-account a {
+  color: #fff;
+  transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease;
+}
+.create-account a:hover {
+  color: #ED4B1E; !important;
+  font-size: 1.2rem;
 }
 .text-shadow {
   text-shadow: 0 3px 25px rgba(0, 0, 0, 0.25);
@@ -245,8 +261,21 @@ body {
   background-color: black;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
-/* Active state */
+.link{
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease;
+}
+.link-white{
+  color: #ffffff;
+  transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease;
+}
+.fs-7 {
+  font-size: 0.875rem; /* 14px */
+}
+.fs-8 {
+  font-size: 0.75rem; /* 12px */
+}
 .menu-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
@@ -264,7 +293,10 @@ body {
 }
 
 @media (min-width: 768px) { /* md */
-
+  .logo{
+    top: 47px;
+    left: 73px;
+  }
 }
 
 @media (min-width: 992px) { /* lg */
@@ -274,8 +306,12 @@ body {
     right: auto;
     transform: translateX(-50%);
     min-width: 1140px;
-
   }
+  .create-account {
+    top: 67px;
+    right: 64px;
+  }
+
 }
 
 @media (min-width: 1200px) { /* xl */
