@@ -21,7 +21,7 @@ body {
   height: 98vh;
   padding: 20px;
 
-  background-image: url("img/men-conference-2024.png");
+  background-image: url("../img/men-conference-2024.png");
 }
 .hero-content {
     max-width: 984px;
