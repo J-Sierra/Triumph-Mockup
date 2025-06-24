@@ -112,3 +112,12 @@ document.addEventListener('click', function (event) {
     toggleBtn.classList.remove('active'); // Optional: revert icon animation
   }
 });
+document.querySelectorAll('#mobileNav .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const menu = document.getElementById('mobileNav');
+    const toggleBtn = document.getElementById('menuToggleBtn');
+
+    menu.classList.remove('show');
+    toggleBtn.classList.remove('active'); // Optional: resets menu icon
+  });
+});
