@@ -31,11 +31,11 @@ function updateCountdown() {
   const now = new Date();
 
   const nextSunday = new Date(now);
-  nextSunday.setDate(now.getDate() + ((7 - now.getDay()) % 7)); // next Sunday
-  nextSunday.setHours(11, 0, 0, 0); // 11:00 AM
+  nextSunday.setDate(now.getDate() + ((7 - now.getDay()) % 7));
+  nextSunday.setHours(11, 0, 0, 0);
 
   const endService = new Date(nextSunday);
-  endService.setHours(13); // 1:00 PM
+  endService.setHours(13);
 
   if (now >= nextSunday && now < endService) {
   countdown.textContent = "NOW!";
@@ -43,7 +43,7 @@ function updateCountdown() {
   }
 
   if (now > endService) {
-  nextSunday.setDate(nextSunday.getDate() + 7); // if past 1PM today, get next Sunday
+  nextSunday.setDate(nextSunday.getDate() + 7);
   }
 
   const diff = nextSunday - now;
@@ -56,7 +56,7 @@ function updateCountdown() {
 }
 
   setInterval(updateCountdown, 1000);
-  updateCountdown(); // initial call
+  updateCountdown();
 
 /*Swiper Carousel logic*/
 const swiper = new Swiper(".swiper", {
@@ -77,7 +77,7 @@ function updateDebugInfo() {
   const test = document.createElement('div');
   document.body.appendChild(test);
 
-  let currentBreakpoint = 'xs'; // fallback
+  let currentBreakpoint = 'xs';
 
   for (const bp of breakpoints) {
     test.className = `d-none d-${bp}-block`;
@@ -108,8 +108,8 @@ document.addEventListener('click', function (event) {
   const clickedToggle = toggleBtn.contains(event.target);
 
   if (!clickedInsideMenu && !clickedToggle && menu.classList.contains('show')) {
-    menu.classList.remove('show'); // Hide the menu
-    toggleBtn.classList.remove('active'); // Optional: revert icon animation
+    menu.classList.remove('show');
+    toggleBtn.classList.remove('active');
   }
 });
 document.querySelectorAll('#mobileNav .nav-link').forEach(link => {
